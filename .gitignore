@@ -1,0 +1,29 @@
+# Operating system clutter
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editors
+.vscode/
+.idea/
+*.swp
+*~
+
+# Local build output (the publishing workflow creates this on GitHub)
+_site/
+
+# Logs and temporary files
+*.log
+tmp/
+.tmp/
+
+# Secrets and private data — must NEVER be committed (this repo is public)
+.env
+.env.*
+*.pem
+*.key
+private/
+clients/
+prospects/
+*.csv
+*.xlsx
