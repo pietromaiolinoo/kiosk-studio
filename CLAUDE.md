@@ -110,3 +110,4 @@ Short summary; full reasoning in [`docs/decisions.md`](docs/decisions.md). Newes
 | 2026-10-16 | Repo renamed to `kiosk-studio`, made public; `main` protected by a ruleset. |
 | 2026-10-16 | Studio website v1: one page + privacy + terms; owner details in `site/config.js`; Formspree-ready contact form. |
 | 2026-10-16 | Website redesign: editorial layout (rules, no cards), Source Serif 4 + Source Sans 3 self-hosted, full-screen hero. |
+| 2026-10-16 | One-off websites only: single price, no care plan or subscription. |

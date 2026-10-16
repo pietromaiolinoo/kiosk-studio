@@ -19,9 +19,8 @@ window.KIOSK_CONFIG = {
   // Optional: where you are based. Example: "Based in Lisbon, working across Europe"
   location: "",
 
-  // Prices, written exactly as they should appear. Example: "€390" and "€19 / month"
+  // Price of a website, written exactly as it should appear. Example: "€390"
   starterPrice: "",
-  carePlanPrice: "",
 
   // Contact form endpoint from Formspree (see README). Example: "https://formspree.io/f/abcdwxyz"
   formEndpoint: "",

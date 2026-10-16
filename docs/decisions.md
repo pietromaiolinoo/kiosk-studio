@@ -159,3 +159,17 @@ redesigned:
 **Why:** Professional services sites (consultancies, design studios) rely on strong serif
 typography and restraint. Rounded cards, gradients and generic sans fonts are now widely seen
 as signs of an AI-generated template, which hurts trust.
+
+---
+
+### 2026-10-16 — One-off websites only, no care plan
+
+**Decision:** Kiosk Studio sells one thing: a website, built once and handed over to the
+client for a single price. There is no monthly care plan, hosting plan or subscription. The
+care plan was removed from the website and from `site/config.js`.
+
+**Why:** The owner's business model is to build the site, deliver it, and finish the job.
+
+**Open question:** where each client's site is hosted after handover (for example on a free
+hosting account in the client's name) and whether later changes are offered as separate paid
+jobs. To be decided by the owner before the first client.

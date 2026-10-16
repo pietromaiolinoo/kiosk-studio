@@ -543,11 +543,14 @@ a:hover { text-decoration-thickness: 2px; }
 }
 
 /* ---------- Pricing ---------- */
-.plans { display: grid; margin-top: 56px; }
-.plan { padding: 32px 0 40px; border-top: 1px solid var(--rule); }
-.plan:first-child { border-top: 3px solid var(--navy-900); }
-.plan h3 { display: flex; align-items: baseline; gap: 12px; font-size: 1.3rem; color: var(--navy-900); }
-.plan-tag { font-size: .85rem; font-weight: 600; color: var(--blue-500); }
+.plan {
+  display: grid;
+  gap: 8px 64px;
+  margin-top: 56px;
+  padding-top: 32px;
+  border-top: 3px solid var(--navy-900);
+}
+.plan h3 { font-size: 1.3rem; color: var(--navy-900); }
 .plan-price {
   margin: 14px 0 10px;
   font-family: var(--serif);
@@ -562,6 +565,7 @@ a:hover { text-decoration-thickness: 2px; }
 .plan-note { color: var(--text-muted); max-width: 28em; }
 .ticks { list-style: none; margin: 24px 0 0; padding: 0; }
 .ticks li { position: relative; padding: 9px 0 9px 28px; border-top: 1px solid var(--rule); }
+.ticks li:first-child { border-top: 0; }
 .ticks li::before {
   content: "";
   position: absolute;
@@ -575,8 +579,8 @@ a:hover { text-decoration-thickness: 2px; }
 .fine-print { font-size: 1rem; color: var(--text-muted); max-width: 36em; }
 
 @media (min-width: 820px) {
-  .plans { grid-template-columns: 1fr 1fr; column-gap: 56px; }
-  .plan + .plan { border-top: 3px solid var(--blue-300); }
+  .plan { grid-template-columns: 1fr 1fr; align-items: start; }
+  .plan .ticks { margin-top: 0; }
   .pricing-foot { grid-template-columns: auto 1fr; align-items: center; gap: 40px; }
 }
 
