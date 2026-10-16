@@ -1,0 +1,65 @@
+# Checks the site on every pull request, and publishes it to GitHub Pages
+# whenever something is merged into main.
+#
+# What gets published:
+#   site/   -> https://<username>.github.io/<repo-name>/
+#   demos/  -> https://<username>.github.io/<repo-name>/demos/<business-type>/
+# templates/, docs/ and scripts/ are NOT published.
+
+name: Check and publish site
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch: # adds a "Run workflow" button in the Actions tab
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Only one publish at a time; a newer one waits for the current one to finish.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check for absolute paths and external scripts/fonts
+        run: ./scripts/check-site.sh
+
+      - name: Assemble the website
+        run: |
+          mkdir -p _site
+          cp -R site/. _site/
+          # Copy each demo folder (skip the README, it is for us, not visitors)
+          for demo in demos/*/; do
+            [ -d "$demo" ] || continue
+            mkdir -p _site/demos
+            cp -R "$demo" _site/demos/
+          done
+          echo "Published files:"
+          find _site -type f | sort
+
+      - name: Package the website for GitHub Pages
+        if: github.event_name != 'pull_request'
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    if: github.event_name != 'pull_request'
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Publish to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
