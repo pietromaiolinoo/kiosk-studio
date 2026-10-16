@@ -104,3 +104,5 @@ Short summary; full reasoning in [`docs/decisions.md`](docs/decisions.md). Newes
 | 2026-10-16 | Publish with GitHub Pages via GitHub Actions: `site/` at the root, `demos/` under `/demos/`. `templates/` and `docs/` are not published. |
 | 2026-10-16 | All paths relative; every demo/template self-contained; system fonts only. |
 | 2026-10-16 | Automatic check on every pull request for absolute paths and external scripts/fonts. |
+| 2026-10-16 | Repo renamed to `kiosk-studio`, made public; `main` protected by a ruleset. |
+| 2026-10-16 | Studio website v1: one page + privacy + terms; owner details in `site/config.js`; Formspree-ready contact form. |

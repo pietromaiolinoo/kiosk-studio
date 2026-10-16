@@ -102,3 +102,40 @@ plain-language description of what changed and why. Nobody pushes directly to `m
 (to be enforced with a branch rule in GitHub settings).
 
 **Why:** Every change is reviewable and reversible, and the history explains itself.
+
+---
+
+### 2026-10-16 — Repository renamed and made public
+
+**Decision:** The repository is `kiosk-studio` and is public. `main` is protected by a ruleset
+(pull request and passing check required). Secret scanning and push protection are on.
+
+**Why:** GitHub Pages is free only for public repositories, and the project URL now reads
+`pietromaiolinoo.github.io/kiosk-studio/`. Sensitive business data stays outside this repo.
+
+---
+
+### 2026-10-16 — Studio website, first version
+
+**Decision:**
+
+- One page, with separate privacy policy and terms pages.
+- Predominantly blue: dark navy for the header, hero, examples and contact; light blue and gray
+  for the other sections; white only for cards.
+- Brand signature: a kiosk awning (blue and white scallops) used in the text logo, favicon and
+  as a stripe under the header.
+- System fonts only, with large, heavy, tightly spaced headings.
+- Sample sites in the "Examples" section are drawn in HTML/CSS (no images), clearly labelled
+  "Sample", for fictional businesses.
+- All owner details (email, WhatsApp, prices, form, photo, logo, legal details) live in
+  `site/config.js`. Anything empty is hidden; nothing broken or "undefined" is ever shown.
+- The contact form posts to Formspree when configured; otherwise falls back to an email draft,
+  or is hidden.
+- A Content-Security-Policy restricts the pages to their own files plus Formspree.
+
+**Why:** A busy owner on a phone should understand the offer in seconds, trust it, and reach
+out. Drawing the samples in code keeps the page fast and avoids stock photos.
+
+**Alternatives considered:** separate pages per section (more clicks, little benefit at this
+size); self-hosted web fonts (nicer typography, but slower and more files to manage — can be
+revisited).

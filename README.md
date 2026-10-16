@@ -36,13 +36,71 @@ Addresses once published (replace `<username>` and `<repo-name>`):
 Because the site lives in a sub-folder of `github.io`, **all links inside pages must be
 relative** (e.g. `css/style.css`, not `/css/style.css`).
 
+## Editing the website
+
+The studio website is in `site/`:
+
+```
+site/
+  index.html      The home page (all sections)
+  privacy.html    Privacy policy
+  terms.html      Terms
+  config.js       YOUR DETAILS: email, WhatsApp, prices, photo, logo, form...
+  css/style.css   Colours, fonts and layout
+  js/main.js      Menu, contact form, and filling in the details from config.js
+  assets/         Images: favicon, social sharing image, and later your logo and photo
+```
+
+### Filling in your details
+
+Open `site/config.js` and fill in the values between the quotes. Anything left empty
+(`""`) is hidden on the site, so it always looks finished. For example:
+
+- No prices yet → the pricing section says "Price on request".
+- No email, WhatsApp or form yet → the contact section says details are coming soon.
+- No logo → a text logo ("Kiosk Studio") is shown.
+
+### Adding your logo or photo
+
+1. Put the image in `site/assets/` (for example `site/assets/logo.png`).
+2. In `config.js`, set `logo: "assets/logo.png"` (or `photo: "assets/me.jpg"`).
+3. If your logo is light-coloured, set `logoOnDark: true`. Otherwise it is shown on a small
+   white badge so it stays readable on the dark blue header.
+
+### Connecting the contact form (Formspree)
+
+The form needs a service to turn messages into emails. Formspree has a free plan.
+
+1. Create an account at formspree.io and click **New form**. Use the email address where you
+   want to receive messages.
+2. Formspree gives you an address like `https://formspree.io/f/abcdwxyz`.
+3. Paste it in `config.js` as `formEndpoint: "https://formspree.io/f/abcdwxyz"`.
+4. In the form's settings on Formspree, keep reCAPTCHA **off** (the site sends messages in the
+   background, which reCAPTCHA blocks; a hidden spam trap is already built in).
+5. Merge the change, then send yourself a test message from the live site.
+
+Until a form service is connected: if you set an `email`, the form opens the visitor's email
+app with their message ready to send; if not, the form is hidden.
+
+If you ever switch to another form service, also update the `Content-Security-Policy` line at
+the top of `index.html`, `privacy.html` and `terms.html`. It lists the only outside address the
+pages are allowed to talk to (currently `https://formspree.io`).
+
+### Web address
+
+The pages mention the current address `https://pietromaiolinoo.github.io/kiosk-studio/` in a
+few places search engines and social apps read (`canonical`, `og:url`, `og:image` at the top of
+each HTML file, plus `sitemap.xml` and `robots.txt`). When you get your own domain, replace it
+there (search for `pietromaiolinoo.github.io`).
+
 ## Check your changes locally
 
 ```sh
 ./scripts/check-site.sh
 ```
 
-To preview a page, just open its `index.html` in a browser — there is no build step.
+To preview a page, open its `index.html` in a browser — there is no build step. (The contact
+form and some details only work when the page is served by a web server, like the live site.)
 
 ## Ground rules
 
