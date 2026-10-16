@@ -139,3 +139,23 @@ out. Drawing the samples in code keeps the page fast and avoids stock photos.
 **Alternatives considered:** separate pages per section (more clicks, little benefit at this
 size); self-hosted web fonts (nicer typography, but slower and more files to manage — can be
 revisited).
+
+---
+
+### 2026-10-16 — Website redesign: editorial instead of "template" look
+
+**Decision:** After reviewing the first version, the owner found it looked generic and
+AI-made (many boxes, pill badges, icon tiles) and too narrow on wide screens. The site was
+redesigned:
+
+- Thin rules and white space instead of cards; square-cornered buttons; no gradients.
+- Headings in **Source Serif 4**, text in **Source Sans 3**, both self-hosted in `site/fonts/`
+  (replaces the earlier "system fonts only" decision).
+- Each section has a numbered label column on the left and content on the right, like
+  consultancy and studio websites.
+- The hero fills the first screen; the content width grows to 1600px on large monitors.
+- The decorative awning stripe was removed; the awning stays only in the logo icon.
+
+**Why:** Professional services sites (consultancies, design studios) rely on strong serif
+typography and restraint. Rounded cards, gradients and generic sans fonts are now widely seen
+as signs of an AI-generated template, which hurts trust.

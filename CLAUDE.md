@@ -38,7 +38,10 @@ a phone, and are wary of being oversold. Write for them:
 - English copy.
 - **Predominantly blue and gray.** Modern, calm, trustworthy. No loud colours, no gimmicks.
 - Clean layouts with plenty of white space.
-- System font stack only (see the "no external CDNs" rule below).
+- Fonts: Source Serif 4 (headings) and Source Sans 3 (text), stored in `site/fonts/`
+  (open licence). Never loaded from an outside service.
+- Editorial look: thin rules and white space instead of boxes and cards; no gradients,
+  no pill badges, no icon tiles.
 - Detailed notes live in [`docs/brand.md`](docs/brand.md).
 
 ## Standing rules (always apply — never break these)
@@ -102,7 +105,8 @@ Short summary; full reasoning in [`docs/decisions.md`](docs/decisions.md). Newes
 | 2026-10-16 | Repository set up: folder structure, standing rules, working agreements. |
 | 2026-10-16 | Plain HTML/CSS, no build step, no frameworks. |
 | 2026-10-16 | Publish with GitHub Pages via GitHub Actions: `site/` at the root, `demos/` under `/demos/`. `templates/` and `docs/` are not published. |
-| 2026-10-16 | All paths relative; every demo/template self-contained; system fonts only. |
+| 2026-10-16 | All paths relative; every demo/template self-contained; fonts stored in the repo, never from a CDN. |
 | 2026-10-16 | Automatic check on every pull request for absolute paths and external scripts/fonts. |
 | 2026-10-16 | Repo renamed to `kiosk-studio`, made public; `main` protected by a ruleset. |
 | 2026-10-16 | Studio website v1: one page + privacy + terms; owner details in `site/config.js`; Formspree-ready contact form. |
+| 2026-10-16 | Website redesign: editorial layout (rules, no cards), Source Serif 4 + Source Sans 3 self-hosted, full-screen hero. |

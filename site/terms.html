@@ -23,14 +23,17 @@
   <meta name="twitter:card" content="summary_large_image">
 
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="fonts/source-serif-4.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/source-sans-3.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="css/style.css">
   <script src="config.js" defer></script>
   <script src="js/main.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
+
   <header class="site-header">
-    <div class="container header-inner">
+    <div class="wrap header-inner">
       <a class="brand" href="index.html" aria-label="Kiosk Studio, home page">
         <img class="brand-logo" data-show-if="logo" data-src="logo" alt="Kiosk Studio" hidden>
         <span class="wordmark" data-hide-if="logo">
@@ -41,16 +44,17 @@
             <path d="M22.5 6H29v8a3.25 3.25 0 0 1-6.5 0z" class="stripe"/>
             <rect x="6" y="19" width="20" height="8" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/>
           </svg>
-          <span class="wordmark-text"><b>Kiosk</b> Studio</span>
+          <span class="wordmark-text">Kiosk Studio</span>
         </span>
       </a>
-      <a class="btn btn-ghost header-back" href="index.html#contact">Contact</a>
+
+      <a class="text-link header-back" href="index.html#contact">Get in touch</a>
     </div>
   </header>
-  <div class="awning" aria-hidden="true"></div>
 
   <main id="main" class="legal">
-    <div class="container container--narrow">
+    <div class="wrap">
+      <div class="legal-inner">
       <a class="back-link" href="index.html"><span aria-hidden="true">←</span> Back to the home page</a>
       <h1>Terms</h1>
       <p class="legal-updated" data-show-if="legal.lastUpdated" hidden>Last updated: <span data-text="legal.lastUpdated"></span></p>
@@ -76,19 +80,23 @@
 
       <h2>Changes</h2>
       <p>These terms may be updated from time to time. The current version is always on this page.</p>
+      </div>
     </div>
   </main>
 
   <footer class="site-footer">
-    <div class="container footer-inner">
-      <p class="footer-brand"><b>Kiosk</b> Studio</p>
-      <p class="footer-tagline">Simple websites for local businesses.</p>
+    <div class="wrap footer-inner">
+      <div>
+        <p class="footer-brand">Kiosk Studio</p>
+        <p>Simple websites for local businesses.</p>
+        <p data-show-if="location" data-text="location" hidden></p>
+      </div>
       <ul class="footer-links">
         <li data-show-if="email" hidden><a data-href="email" data-format="mailto" data-text="email"></a></li>
         <li><a href="privacy.html">Privacy policy</a></li>
         <li><a href="terms.html">Terms</a></li>
+        <li class="footer-copy">© <span data-year></span> Kiosk Studio</li>
       </ul>
-      <p class="footer-copy">© <span data-year></span> Kiosk Studio</p>
     </div>
   </footer>
 </body>

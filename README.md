@@ -48,6 +48,7 @@ site/
   config.js       YOUR DETAILS: email, WhatsApp, prices, photo, logo, form...
   css/style.css   Colours, fonts and layout
   js/main.js      Menu, contact form, and filling in the details from config.js
+  fonts/          The two fonts used on the site (free licence, stored here)
   assets/         Images: favicon, social sharing image, and later your logo and photo
 ```
 
