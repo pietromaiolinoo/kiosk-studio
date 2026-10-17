@@ -229,3 +229,22 @@ come from `site/config.js` and are hidden while empty.
 Also: "I reply within one business day" by the contact form; the privacy policy names GitHub
 Pages (hosting) and Formspree (form); `/privacy` and `/terms` are the canonical URLs; basic
 JSON-LD (name, description, url) on the home page.
+
+---
+
+### 2026-10-17 — Multi-page site with motion
+
+**Decision:** The site becomes several pages: Home, About (with a large photo space), Work
+(the sample websites, with links once the real demos exist), Pricing & FAQ, and Contact, plus
+privacy and terms. The look follows a fine-dining restaurant site the owner liked: dark header
+with the logo centred between two groups of links, dark page tops with very large light serif
+titles, a moving strip of words, headings that slide up as you scroll, headings on the left and
+text on the right, large image panels, a big call-to-action band and a dark footer with columns.
+Colours stay blue and gray.
+
+**How:** Plain HTML/CSS with a little JavaScript (IntersectionObserver) for the animations; no
+outside libraries. Animations are switched off for people who ask their device to reduce
+motion, and everything is visible without JavaScript.
+
+**Why:** The owner wanted a richer, more complete site with a place to present himself and a
+page dedicated to example work.

@@ -9,12 +9,12 @@
   <title>Privacy policy — Kiosk Studio</title>
   <meta name="description" content="How Kiosk Studio handles your personal data: what is collected, why, and your rights.">
   <link rel="canonical" href="https://kioskstudio.art/privacy">
-  <meta name="theme-color" content="#0b1f36">
+  <meta name="theme-color" content="#0c2340">
 
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Kiosk Studio">
   <meta property="og:title" content="Privacy policy — Kiosk Studio">
-  <meta property="og:description" content="A clear, fast website for your shop, café or salon. Made for phones, with a simple price.">
+  <meta property="og:description" content="How Kiosk Studio handles your personal data: what is collected, why, and your rights.">
   <meta property="og:url" content="https://kioskstudio.art/privacy">
   <meta property="og:image" content="https://kioskstudio.art/assets/og-image.png">
   <meta property="og:image:width" content="1200">
@@ -37,32 +37,41 @@
     <div class="wrap header-inner">
       <a class="brand" href="./" aria-label="Kiosk Studio, home page">
         <img class="brand-logo" data-show-if="logo" data-src="logo" alt="Kiosk Studio" hidden>
-        <span class="wordmark" data-hide-if="logo">
-          <svg class="wordmark-icon" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
-            <path d="M3 6h6.5v8a3.25 3.25 0 0 1-6.5 0z" fill="currentColor"/>
-            <path d="M9.5 6H16v8a3.25 3.25 0 0 1-6.5 0z" class="stripe"/>
-            <path d="M16 6h6.5v8a3.25 3.25 0 0 1-6.5 0z" fill="currentColor"/>
-            <path d="M22.5 6H29v8a3.25 3.25 0 0 1-6.5 0z" class="stripe"/>
-            <rect x="6" y="19" width="20" height="8" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/>
-          </svg>
-          <span class="wordmark-text">Kiosk Studio</span>
-        </span>
+        <span class="wordmark" data-hide-if="logo">Kiosk Studio</span>
       </a>
 
-      <a class="text-link header-back" href="./#contact">Get in touch</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span class="nav-toggle-bars" aria-hidden="true"></span>
+        <span class="visually-hidden">Menu</span>
+      </button>
+
+      <nav id="site-nav" class="site-nav" aria-label="Main">
+        <ul class="nav-left">
+            <li class="nav-home"><a href="./">Home</a></li>
+            <li><a href="about">About</a></li>
+            <li><a href="work">Work</a></li>
+            <li><a href="pricing">Pricing</a></li>
+        </ul>
+        <ul class="nav-right">
+            <li><a href="pricing#faq">FAQ</a></li>
+            <li><a href="contact">Contact</a></li>
+            <li><a class="btn btn-pill nav-cta" href="contact">Get in touch</a></li>
+        </ul>
+      </nav>
     </div>
   </header>
 
-  <main id="main" class="legal">
-    <div class="wrap">
-      <div class="legal-inner">
-      <a class="back-link" href="./"><span aria-hidden="true">←</span> Back to the home page</a>
+  <main id="main">
+
+    <section class="legal">
+      <div class="wrap">
+        <div class="legal-inner">
       <h1>Privacy policy</h1>
       <p class="legal-updated" data-show-if="legal.lastUpdated" hidden>Last updated: <span data-text="legal.lastUpdated"></span></p>
       <p>I keep this simple: this website collects as little as possible, and only to reply to you.</p>
 
       <h2>Who is responsible</h2>
-      <p>This website is run by Kiosk Studio<span data-show-if="legal.name" hidden>, operated by <span data-text="legal.name"></span></span><span data-hide-if="legal.name"><span data-show-if="ownerName" hidden>, operated by <span data-text="ownerName"></span></span></span><span data-show-if="legal.address" hidden>, <span data-text="legal.address"></span></span>.<span data-show-if="email" hidden> You can contact me at <a data-href="email" data-format="mailto" data-text="email"></a>.</span><span data-hide-if="email"> You can contact me through the <a href="./#contact">contact section</a>.</span></p>
+      <p>This website is run by Kiosk Studio<span data-show-if="legal.name" hidden>, operated by <span data-text="legal.name"></span></span><span data-hide-if="legal.name"><span data-show-if="ownerName" hidden>, operated by <span data-text="ownerName"></span></span></span><span data-show-if="legal.address" hidden>, <span data-text="legal.address"></span></span>.<span data-show-if="email" hidden> You can contact me at <a data-href="email" data-format="mailto" data-text="email"></a>.</span><span data-hide-if="email"> You can contact me through the <a href="contact">contact section</a>.</span></p>
 
       <h2>What this website does not do</h2>
       <ul>
@@ -93,23 +102,49 @@
 
       <h2>Changes</h2>
       <p>If this policy changes, the new version will be published on this page.</p>
+        </div>
       </div>
-    </div>
+    </section>
   </main>
 
   <footer class="site-footer">
-    <div class="wrap footer-inner">
-      <div>
-        <p class="footer-brand">Kiosk Studio</p>
-        <p>Simple websites for local businesses.</p>
-        <p data-show-if="location" data-text="location" hidden></p>
+    <div class="wrap">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img class="footer-logo" src="assets/logo-light.png" alt="Kiosk Studio" width="178" height="40" loading="lazy">
+          <p>Simple websites for<br>local businesses.</p>
+        </div>
+        <div>
+          <p class="footer-title">Navigate</p>
+          <ul>
+            <li><a href="./">Home</a></li>
+            <li><a href="about">About</a></li>
+            <li><a href="work">Work</a></li>
+            <li><a href="pricing">Pricing &amp; FAQ</a></li>
+            <li><a href="contact">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer-title">Contact</p>
+          <ul>
+            <li data-show-if="email" hidden><a data-href="email" data-format="mailto" data-text="email"></a></li>
+            <li data-show-if="whatsapp" hidden><a data-href="whatsapp" data-format="whatsapp">WhatsApp</a></li>
+            <li>I reply within one business day.</li>
+            <li data-show-if="location" data-text="location" hidden></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer-title">Legal</p>
+          <ul>
+            <li><a href="privacy">Privacy policy</a></li>
+            <li><a href="terms">Terms</a></li>
+          </ul>
+        </div>
       </div>
-      <ul class="footer-links">
-        <li data-show-if="email" hidden><a data-href="email" data-format="mailto" data-text="email"></a></li>
-        <li><a href="privacy">Privacy policy</a></li>
-        <li><a href="terms">Terms</a></li>
-        <li class="footer-copy">© <span data-year></span> Kiosk Studio</li>
-      </ul>
+      <div class="footer-bottom">
+        <p>© <span data-year></span> Kiosk Studio. All rights reserved.</p>
+        <p>kioskstudio.art</p>
+      </div>
     </div>
   </footer>
 </body>

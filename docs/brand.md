@@ -14,9 +14,10 @@ Modern, calm, trustworthy. A friendly local professional, not a tech agency.
 
 ## Look
 
-Editorial and calm, like a small consultancy: big serif headlines, thin dividing lines,
-plenty of space. Avoid the "template" look: no rounded cards everywhere, no gradients,
-no pill badges, no icons in coloured squares.
+Editorial and calm, inspired by a fine-dining restaurant site: very large light serif headlines,
+small uppercase labels with a short line before them, thin dividing lines, plenty of space,
+pill-shaped uppercase buttons and gentle motion (headings sliding up, a moving strip of words).
+Avoid the "template" look: no rounded cards everywhere, no gradients, no icons in coloured squares.
 
 ## Colours
 
@@ -28,8 +29,9 @@ Predominantly blue and gray. Check every text/background pair for contrast (WCAG
 | Navy (sections)  | `#11304f` |
 | Blue (buttons, logo blue) | `#0a54b5` |
 | Light blue text  | `#c2d6ee` |
-| Light blue bg    | `#dde8f5` |
-| Gray bg          | `#e4e8ee` |
+| Page background  | `#eef2f6` |
+| Tinted band      | `#e1e8f0` |
+| Image panels     | `#d3deea` |
 | Text             | `#1f2b3a` |
 | Muted text       | `#4d5a6a` |
 

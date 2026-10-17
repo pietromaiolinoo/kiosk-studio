@@ -41,7 +41,8 @@ a phone, and are wary of being oversold. Write for them:
 - Fonts: Source Serif 4 (headings) and Source Sans 3 (text), stored in `site/fonts/`
   (open licence). Never loaded from an outside service.
 - Editorial look: thin rules and white space instead of boxes and cards; no gradients,
-  no pill badges, no icon tiles.
+  no icon tiles. Small uppercase labels and pill-shaped buttons; gentle scroll animations
+  (no outside libraries, off for people who prefer reduced motion).
 - Detailed notes live in [`docs/brand.md`](docs/brand.md).
 
 ## Standing rules (always apply — never break these)
@@ -116,3 +117,4 @@ Short summary; full reasoning in [`docs/decisions.md`](docs/decisions.md). Newes
 | 2026-10-17 | "Price on request" on the website; fixed quote per enquiry; pricing study later. |
 | 2026-10-17 | Domain kioskstudio.art (Porkbun) connected to GitHub Pages. |
 | 2026-10-17 | Offer stated on the site: preview before payment, launch price in writing, domain in client's name, hosting included, 30 days of fixes, no monthly fee. |
+| 2026-10-17 | Multi-page site (Home, About, Work, Pricing & FAQ, Contact), restaurant-site-inspired layout with scroll animations and marquee. |
