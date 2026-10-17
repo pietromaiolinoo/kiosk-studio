@@ -115,3 +115,4 @@ Short summary; full reasoning in [`docs/decisions.md`](docs/decisions.md). Newes
 | 2026-10-17 | Logo added (light version in header, KS mark as icon); studio email and WhatsApp in config. |
 | 2026-10-17 | "Price on request" on the website; fixed quote per enquiry; pricing study later. |
 | 2026-10-17 | Domain kioskstudio.art (Porkbun) connected to GitHub Pages. |
+| 2026-10-17 | Offer stated on the site: preview before payment, launch price in writing, domain in client's name, hosting included, 30 days of fixes, no monthly fee. |

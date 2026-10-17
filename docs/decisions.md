@@ -204,3 +204,28 @@ WHOIS privacy and transfer lock on). It points to GitHub Pages with DNS records 
 the custom domain set in the repository's Pages settings. Paths stay relative.
 
 **Why:** A short, memorable address looks more professional than the GitHub address.
+
+---
+
+### 2026-10-17 — The offer, stated on the website
+
+**Decision:** The website now states the offer explicitly:
+
+1. You see a preview first and pay only when you approve it.
+2. A launch price for the first websites, agreed in writing before any work starts
+   ("Price on request" until `starterPrice` is set in `site/config.js`).
+3. The client's domain is registered in the client's own name and account; Kiosk Studio helps
+   with the setup.
+4. Hosting is included at no extra cost; the client can have the website files at any time.
+   *(to be confirmed by the owner)*
+5. 30 days of small fixes after launch; later changes are quoted separately.
+   *(to be confirmed by the owner)*
+6. No monthly fee to Kiosk Studio.
+
+The About section is rewritten around the owner (a Brazilian engineering student studying
+abroad in Europe), using only details the owner provided; name, photo, university and city
+come from `site/config.js` and are hidden while empty.
+
+Also: "I reply within one business day" by the contact form; the privacy policy names GitHub
+Pages (hosting) and Formspree (form); `/privacy` and `/terms` are the canonical URLs; basic
+JSON-LD (name, description, url) on the home page.

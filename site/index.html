@@ -27,6 +27,15 @@
   <link rel="preload" href="fonts/source-serif-4.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="fonts/source-sans-3.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="css/style.css">
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Kiosk Studio",
+      "description": "Simple, affordable websites for small local businesses: florists, cafés, restaurants, barbershops and small shops.",
+      "url": "https://kioskstudio.art/"
+    }
+  </script>
   <script src="config.js" defer></script>
   <script src="js/main.js" defer></script>
 </head>
@@ -105,8 +114,8 @@
       <div class="wrap">
         <ul class="hero-facts">
           <li><strong>Made for phones</strong> Most customers find you on one.</li>
-          <li><strong data-show-if="starterPrice" hidden>From <span data-text="starterPrice"></span></strong><strong data-hide-if="starterPrice">Pay once</strong> No subscription, no monthly fee.</li>
-          <li><strong>No tracking</strong> No cookie banner for your customers.</li>
+          <li><strong>See it before you pay</strong> You pay only when you approve the preview.</li>
+          <li><strong>No monthly fee</strong> Hosting included. Your domain stays in your name.</li>
         </ul>
       </div>
     </section>
@@ -251,12 +260,12 @@
             <li>
               <span class="step-number" aria-hidden="true">2</span>
               <h3>You see a preview</h3>
-              <p>I build your site and send you a link to look at on your phone. You tell me what to change, in plain words.</p>
+              <p>I build your site and send you a link to look at on your phone. You tell me what to change, in plain words. You pay only when you approve it.</p>
             </li>
             <li>
               <span class="step-number" aria-hidden="true">3</span>
               <h3>It goes live</h3>
-              <p>When you are happy, your website goes online and you can share it with your customers.</p>
+              <p>Your website goes online at your own address, with hosting included. For 30 days after launch, small fixes are on me.</p>
             </li>
           </ol>
         </div>
@@ -268,13 +277,13 @@
       <div class="wrap section-grid">
         <p class="section-label"><span>04</span> Pricing</p>
         <div class="section-body">
-          <h2 id="pricing-title">One simple price.</h2>
-          <p class="section-intro">Every business is a little different, so tell me what you need and I will give you one fixed price before any work starts. You pay once. No subscription and no monthly fee to me.</p>
+          <h2 id="pricing-title">One launch price, agreed in writing.</h2>
+          <p class="section-intro">The first Kiosk Studio websites come at a launch price. Tell me what you need and I will confirm one fixed price in writing before any work starts. You pay only after you have seen and approved your website, and there is no monthly fee to me.</p>
 
           <div class="plan">
             <div class="plan-summary">
               <h3>Your website</h3>
-              <p class="plan-price" data-show-if="starterPrice" hidden><span data-text="starterPrice"></span> <small>one-off</small></p>
+              <p class="plan-price" data-show-if="starterPrice" hidden><span data-text="starterPrice"></span> <small>launch price, paid once</small></p>
               <p class="plan-price plan-price--ask" data-hide-if="starterPrice">Price on request</p>
               <p class="plan-note">A clear, one-page website for your business, made once and handed over to you.</p>
             </div>
@@ -283,14 +292,15 @@
               <li>Your hours, address, services or menu</li>
               <li>Call, message and directions buttons</li>
               <li>Basic setup for Google</li>
-              <li>Help connecting your own web address</li>
-              <li>A preview to review before it goes live</li>
+              <li>Hosting included, at no extra cost</li>
+              <li>Your domain registered in your name, with my help</li>
+              <li>30 days of small fixes after launch</li>
             </ul>
           </div>
 
           <div class="pricing-foot">
             <a class="btn btn-primary" href="#contact">Ask about your website</a>
-            <p class="fine-print">Your web address (domain) is usually a small yearly fee paid to the company that registers it. I can help you choose and set it up.</p>
+            <p class="fine-print">Your domain (like yourshop.com) is registered in your own name and account, usually for a small yearly fee you pay directly to the company that registers it. I help you choose it and set it up.</p>
           </div>
         </div>
       </div>
@@ -309,8 +319,9 @@
             </h2>
           </div>
           <div class="about-copy">
-            <p>I run Kiosk Studio on my own. There is no sales team and no account manager: from the first message to the day your site goes live, you deal with me.</p>
-            <p>I started it because many good local places are hard to find online. Some have no website. Others have one that is slow, broken or years out of date. A small business deserves a simple, honest website that works, at a price that makes sense.</p>
+            <p>I'm a Brazilian engineering student studying abroad in Europe<span data-show-if="university" hidden>, at <span data-text="university"></span></span><span data-show-if="city" hidden>, in <span data-text="city"></span></span>. Kiosk Studio is the small studio I am building alongside my studies.</p>
+            <p>There is no sales team and no account manager: from the first message to the day your site goes live, you deal with me.</p>
+            <p>The studio is new, so the first websites come at a launch price.</p>
             <p class="about-location" data-show-if="location" data-text="location" hidden></p>
           </div>
         </div>
@@ -341,16 +352,28 @@
               <p>That is very common. Send me the link and I will tell you honestly whether it makes more sense to fix it or start fresh.</p>
             </details>
             <details>
+              <summary>Do I pay before I see anything?</summary>
+              <p>No. I send you a preview of your website first, to look at on your own phone. You pay only when you approve it. The price is agreed in writing before any work starts.</p>
+            </details>
+            <details>
               <summary>How long does it take?</summary>
               <p>It depends mostly on how quickly you can send the basics. A simple one-page website is a small project, so it is a matter of days, not months. I will give you a date before we start.</p>
             </details>
             <details>
-              <summary>Is there a monthly fee?</summary>
-              <p>Not to me. You pay once for your website. The only regular cost is your web address (domain), usually a small yearly fee paid to the company that registers it.</p>
+              <summary>Who owns my website and my domain?</summary>
+              <p>You do. Your domain is registered in your own name and account, and I help you set it up. The website files are yours too: you can ask me for a copy at any time.</p>
+            </details>
+            <details>
+              <summary>What happens after my website is live?</summary>
+              <p>Hosting is included at no extra cost, and there is no monthly fee to me. For 30 days after launch, small fixes are included, like a typo or a wrong opening hour. After that, any change is quoted separately before I do anything.</p>
+            </details>
+            <details>
+              <summary>Will you still be around later?</summary>
+              <p>You can reach me at the same email and number. And you are never stuck: your domain is in your name and you can have the website files at any time, so anyone else can take over if you ever need them to.</p>
             </details>
             <details>
               <summary>Why is it more affordable than an agency?</summary>
-              <p>Because the websites are simple on purpose. I focus on what local customers actually need and reuse designs I have refined for each type of business, instead of starting from zero every time.</p>
+              <p>Because the websites are simple on purpose: one clear page with what local customers actually need, instead of a large custom project. And while the studio is new, the first websites come at a launch price.</p>
             </details>
           </div>
         </div>
@@ -403,7 +426,8 @@
             </div>
             <button class="btn btn-light" type="submit">Send message</button>
             <p class="form-status" role="status" aria-live="polite"></p>
-            <p class="form-privacy">Your details are only used to reply to you. See the <a href="privacy.html">privacy policy</a>.</p>
+            <p class="form-reply">I reply within one business day.</p>
+            <p class="form-privacy">Your details are only used to reply to you. See the <a href="privacy">privacy policy</a>.</p>
           </form>
         </div>
       </div>
@@ -420,8 +444,8 @@
       </div>
       <ul class="footer-links">
         <li data-show-if="email" hidden><a data-href="email" data-format="mailto" data-text="email"></a></li>
-        <li><a href="privacy.html">Privacy policy</a></li>
-        <li><a href="terms.html">Terms</a></li>
+        <li><a href="privacy">Privacy policy</a></li>
+        <li><a href="terms">Terms</a></li>
         <li class="footer-copy">© <span data-year></span> Kiosk Studio</li>
       </ul>
     </div>

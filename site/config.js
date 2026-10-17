@@ -16,10 +16,16 @@ window.KIOSK_CONFIG = {
   // Example: "351912345678"
   whatsapp: "5521990538882",
 
+  // Optional, shown in "About": your university and the city where you study.
+  // Leave empty to leave them out. Example: "University of Lisbon" and "Lisbon"
+  university: "",
+  city: "",
+
   // Optional: where you are based. Example: "Based in Lisbon, working across Europe"
   location: "",
 
-  // Price of a website, written exactly as it should appear. Example: "€390"
+  // Launch price of a website, written exactly as it should appear. Example: "€390"
+  // Leave empty to show "Price on request".
   starterPrice: "",
 
   // Contact form endpoint from Formspree (see README). Example: "https://formspree.io/f/abcdwxyz"
