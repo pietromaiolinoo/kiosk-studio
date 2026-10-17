@@ -62,6 +62,13 @@ them, change them on every page (or ask Claude to). Page addresses have no `.htm
 `kioskstudio.art/about`, `/work`, `/pricing`, `/contact`. When you open a file directly on
 your computer, links between pages need the published site (or a local web server) to work.
 
+### After changing the CSS or JavaScript
+
+Each page loads `css/style.css`, `js/main.js` and `config.js` with a version tag, like
+`style.css?v=20261017b`. When any of these files change, change the tag on every page (a new
+date is fine). Otherwise visitors' browsers may keep the old file for a while and show the new
+pages with the old design.
+
 ### Filling in your details
 
 Open `site/config.js` and fill in the values between the quotes. Anything left empty
