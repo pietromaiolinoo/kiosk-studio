@@ -184,3 +184,13 @@ blue now matches the logo blue.
 
 **Note:** The WhatsApp number is Brazilian (+55) while the target market is Europe. European
 owners may hesitate to message a foreign number; a European number could be considered later.
+
+---
+
+### 2026-10-17 — "Price on request" for now
+
+**Decision:** The website shows "Price on request" instead of a fixed price. Each enquiry gets
+a fixed quote before any work starts. A pricing study (`docs/pricing-research.md`) will come
+later; once a price is set, it goes in `starterPrice` in `site/config.js`.
+
+**Why:** The owner wants to talk to each prospect first and has not researched market prices yet.

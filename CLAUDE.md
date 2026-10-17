@@ -112,3 +112,4 @@ Short summary; full reasoning in [`docs/decisions.md`](docs/decisions.md). Newes
 | 2026-10-16 | Website redesign: editorial layout (rules, no cards), Source Serif 4 + Source Sans 3 self-hosted, full-screen hero. |
 | 2026-10-16 | One-off websites only: single price, no care plan or subscription. |
 | 2026-10-17 | Logo added (light version in header, KS mark as icon); studio email and WhatsApp in config. |
+| 2026-10-17 | "Price on request" on the website; fixed quote per enquiry; pricing study later. |
