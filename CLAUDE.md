@@ -66,8 +66,9 @@ a phone, and are wary of being oversold. Write for them:
   no frameworks, no package managers unless a decision in `docs/decisions.md` says otherwise.
   Simple = cheap to maintain = cheap for clients.
 - **All paths must be relative** (`css/style.css`, `../images/logo.png`), never starting with
-  `/`. The site is served from a project URL (`<username>.github.io/<repo-name>/`), so a path
-  like `/css/style.css` would break.
+  `/`. Pages must work both at https://kioskstudio.art/ and at the GitHub address
+  (`pietromaiolinoo.github.io/kiosk-studio/`), and demos must keep working when moved to a
+  client's domain, so a path like `/css/style.css` would break.
 - **Every demo and template is self-contained**: its own folder with its own `index.html`,
   `css/`, `images/`. No shared files between folders, so any one of them can be copied and
   handed to a client on its own.
@@ -113,3 +114,4 @@ Short summary; full reasoning in [`docs/decisions.md`](docs/decisions.md). Newes
 | 2026-10-16 | One-off websites only: single price, no care plan or subscription. |
 | 2026-10-17 | Logo added (light version in header, KS mark as icon); studio email and WhatsApp in config. |
 | 2026-10-17 | "Price on request" on the website; fixed quote per enquiry; pricing study later. |
+| 2026-10-17 | Domain kioskstudio.art (Porkbun) connected to GitHub Pages. |

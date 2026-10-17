@@ -28,13 +28,14 @@ The website is hosted for free on **GitHub Pages**.
 3. When the pull request is **merged into `main`**, GitHub automatically **publishes** the site.
    It is live a minute or two later.
 
-Addresses once published (replace `<username>` and `<repo-name>`):
+Addresses once published:
 
-- Studio site: `https://<username>.github.io/<repo-name>/`
-- Demos: `https://<username>.github.io/<repo-name>/demos/<business-type>/`
+- Studio site: `https://kioskstudio.art/`
+- Demos: `https://kioskstudio.art/demos/<business-type>/`
 
-Because the site lives in a sub-folder of `github.io`, **all links inside pages must be
-relative** (e.g. `css/style.css`, not `/css/style.css`).
+**All links inside pages must be relative** (e.g. `css/style.css`, not `/css/style.css`), so
+the site works on any address, including the GitHub one, and demos can be moved to a client's
+own domain unchanged.
 
 ## Editing the website
 
@@ -89,10 +90,13 @@ pages are allowed to talk to (currently `https://formspree.io`).
 
 ### Web address
 
-The pages mention the current address `https://pietromaiolinoo.github.io/kiosk-studio/` in a
-few places search engines and social apps read (`canonical`, `og:url`, `og:image` at the top of
-each HTML file, plus `sitemap.xml` and `robots.txt`). When you get your own domain, replace it
-there (search for `pietromaiolinoo.github.io`).
+The site lives at **https://kioskstudio.art/** (domain registered at Porkbun, connected in
+GitHub under Settings → Pages → Custom domain). The old address
+`pietromaiolinoo.github.io/kiosk-studio/` redirects there automatically.
+
+The address also appears in a few places search engines and social apps read (`canonical`,
+`og:url`, `og:image` at the top of each HTML file, plus `sitemap.xml` and `robots.txt`). If the
+domain ever changes, replace it there (search for `kioskstudio.art`).
 
 ## Check your changes locally
 

@@ -194,3 +194,13 @@ a fixed quote before any work starts. A pricing study (`docs/pricing-research.md
 later; once a price is set, it goes in `starterPrice` in `site/config.js`.
 
 **Why:** The owner wants to talk to each prospect first and has not researched market prices yet.
+
+---
+
+### 2026-10-17 — Domain: kioskstudio.art
+
+**Decision:** The studio site uses **kioskstudio.art**, registered at Porkbun (auto-renew,
+WHOIS privacy and transfer lock on). It points to GitHub Pages with DNS records at Porkbun and
+the custom domain set in the repository's Pages settings. Paths stay relative.
+
+**Why:** A short, memorable address looks more professional than the GitHub address.

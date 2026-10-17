@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://pietromaiolinoo.github.io/kiosk-studio/sitemap.xml
+Sitemap: https://kioskstudio.art/sitemap.xml
