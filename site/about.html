@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; connect-src 'self' https://formspree.io; form-action 'self' https://formspree.io mailto:; base-uri 'self'; object-src 'none'">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+
+  <title>About — Kiosk Studio</title>
+  <meta name="description" content="Kiosk Studio is a small studio run by one person: a Brazilian engineering student studying abroad in Europe. You talk to the person who builds your website.">
+  <link rel="canonical" href="https://kioskstudio.art/about">
+  <meta name="theme-color" content="#0c2340">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Kiosk Studio">
+  <meta property="og:title" content="About — Kiosk Studio">
+  <meta property="og:description" content="Kiosk Studio is a small studio run by one person: a Brazilian engineering student studying abroad in Europe. You talk to the person who builds your website.">
+  <meta property="og:url" content="https://kioskstudio.art/about">
+  <meta property="og:image" content="https://kioskstudio.art/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Kiosk Studio — simple websites for local businesses">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="assets/favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="preload" href="fonts/source-serif-4.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/source-sans-3.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="config.js" defer></script>
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="./" aria-label="Kiosk Studio, home page">
+        <img class="brand-logo" data-show-if="logo" data-src="logo" alt="Kiosk Studio" hidden>
+        <span class="wordmark" data-hide-if="logo">Kiosk Studio</span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span class="nav-toggle-bars" aria-hidden="true"></span>
+        <span class="visually-hidden">Menu</span>
+      </button>
+
+      <nav id="site-nav" class="site-nav" aria-label="Main">
+        <ul class="nav-left">
+            <li class="nav-home"><a href="./">Home</a></li>
+            <li><a href="about" aria-current="page">About</a></li>
+            <li><a href="work">Work</a></li>
+            <li><a href="pricing">Pricing</a></li>
+        </ul>
+        <ul class="nav-right">
+            <li><a href="pricing#faq">FAQ</a></li>
+            <li><a href="contact">Contact</a></li>
+            <li><a class="btn btn-pill nav-cta" href="contact">Get in touch</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-hero">
+      <div class="wrap page-hero-inner page-hero-inner--split">
+        <div class="page-hero-copy">
+          <p class="eyebrow" data-reveal>About</p>
+          <h1 class="mask" data-reveal><span><span data-show-if="ownerName" hidden>Hi, I&#8217;m <span data-text="ownerName"></span>.</span><span data-hide-if="ownerName">About me.</span></span></h1>
+          <p class="lead" data-reveal>You talk to the person who builds your website.</p>
+        </div>
+        <div class="portrait" data-reveal>
+          <img class="portrait-img" data-show-if="photo" data-src="photo" alt="Portrait of the person behind Kiosk Studio" width="640" height="800" hidden>
+          <div class="portrait-empty" data-hide-if="photo">
+            <img src="assets/logo-mark.png" alt="" width="120" height="113">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap split">
+        <div>
+          <p class="eyebrow" data-reveal>Who I am</p>
+          <h2 class="mask" data-reveal><span>A small studio, built alongside my studies.</span></h2>
+        </div>
+        <div class="split-copy" data-reveal>
+          <p>I'm a Brazilian engineering student studying abroad in Europe<span data-show-if="university" hidden>, at <span data-text="university"></span></span><span data-show-if="city" hidden>, in <span data-text="city"></span></span>. Kiosk Studio is the small studio I am building alongside my studies.</p>
+          <p>There is no sales team and no account manager: from the first message to the day your site goes live, you deal with me.</p>
+          <p>The studio is new, so the first websites come at a launch price.</p>
+          <p class="split-note" data-show-if="location" data-text="location" hidden></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--tint">
+      <div class="wrap split split--head">
+        <div>
+          <p class="eyebrow" data-reveal>How I work</p>
+          <h2 class="mask" data-reveal><span>Simple, honest and in plain words.</span></h2>
+        </div>
+      </div>
+      <div class="wrap">
+        <ul class="rows">
+          <li data-reveal><strong>You talk to me directly</strong><span>From the first message to the day your site goes live.</span></li>
+          <li data-reveal><strong>No tech talk</strong><span>You tell me about your business in your own words. I explain anything you need to know.</span></li>
+          <li data-reveal><strong>You see it before you pay</strong><span>A preview on your own phone first. Payment only when you approve it.</span></li>
+          <li data-reveal><strong>You are never stuck</strong><span>Your domain is in your name and the website files are yours.</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="cta-band">
+      <div class="wrap cta-inner">
+        <h2 class="mask" data-reveal><span>Tell me about your business.</span></h2>
+        <div class="cta-actions" data-reveal>
+          <a class="btn btn-pill btn-light" href="contact">Get in touch</a>
+          <a class="text-link" data-show-if="whatsapp" data-href="whatsapp" data-format="whatsapp" hidden>WhatsApp <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img class="footer-logo" src="assets/logo-light.png" alt="Kiosk Studio" width="178" height="40" loading="lazy">
+          <p>Simple websites for<br>local businesses.</p>
+        </div>
+        <div>
+          <p class="footer-title">Navigate</p>
+          <ul>
+            <li><a href="./">Home</a></li>
+            <li><a href="about">About</a></li>
+            <li><a href="work">Work</a></li>
+            <li><a href="pricing">Pricing &amp; FAQ</a></li>
+            <li><a href="contact">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer-title">Contact</p>
+          <ul>
+            <li data-show-if="email" hidden><a data-href="email" data-format="mailto" data-text="email"></a></li>
+            <li data-show-if="whatsapp" hidden><a data-href="whatsapp" data-format="whatsapp">WhatsApp</a></li>
+            <li>I reply within one business day.</li>
+            <li data-show-if="location" data-text="location" hidden></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer-title">Legal</p>
+          <ul>
+            <li><a href="privacy">Privacy policy</a></li>
+            <li><a href="terms">Terms</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© <span data-year></span> Kiosk Studio. All rights reserved.</p>
+        <p>kioskstudio.art</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

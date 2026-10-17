@@ -43,15 +43,24 @@ The studio website is in `site/`:
 
 ```
 site/
-  index.html      The home page (all sections)
+  index.html      Home
+  about.html      About me (photo and introduction)
+  work.html       Examples: the sample websites
+  pricing.html    Pricing, what you can count on, and the FAQ
+  contact.html    Contact details and the contact form
   privacy.html    Privacy policy
   terms.html      Terms
-  config.js       YOUR DETAILS: email, WhatsApp, prices, photo, logo, form...
-  css/style.css   Colours, fonts and layout
-  js/main.js      Menu, contact form, and filling in the details from config.js
+  config.js       YOUR DETAILS: email, WhatsApp, price, photo, logo, form, demo links...
+  css/style.css   Colours, fonts, layout and animations
+  js/main.js      Menu, scroll animations, contact form, filling in details from config.js
   fonts/          The two fonts used on the site (free licence, stored here)
-  assets/         Images: favicon, social sharing image, and later your logo and photo
+  assets/         Images: logo, icons, social sharing image, and later your photo
 ```
+
+The menu, header and footer are repeated at the top and bottom of each page. If you change
+them, change them on every page (or ask Claude to). Page addresses have no `.html`:
+`kioskstudio.art/about`, `/work`, `/pricing`, `/contact`. When you open a file directly on
+your computer, links between pages need the published site (or a local web server) to work.
 
 ### Filling in your details
 

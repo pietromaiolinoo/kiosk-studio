@@ -1,7 +1,8 @@
 /* Kiosk Studio — page behaviour
    1. Fills the page with the values from config.js and hides what is missing.
    2. Opens and closes the mobile menu.
-   3. Sends the contact form (Formspree), or falls back to an email draft. */
+   3. Reveals sections with a gentle animation as you scroll.
+   4. Sends the contact form (Formspree), or falls back to an email draft. */
 
 (function () {
   "use strict";
@@ -9,6 +10,7 @@
   var config = window.KIOSK_CONFIG || {};
   var root = document.documentElement;
   root.classList.remove("no-js");
+  root.classList.add("js");
 
   /* ---------- 1. Settings from config.js ---------- */
 
@@ -90,6 +92,7 @@
     if (!toggle || !nav) return;
     toggle.setAttribute("aria-expanded", String(open));
     nav.classList.toggle("is-open", open);
+    document.body.classList.toggle("menu-open", open);
   }
 
   if (toggle && nav) {
@@ -110,7 +113,38 @@
     });
   }
 
-  /* ---------- 3. Contact form ---------- */
+  // Close the full-screen phone menu if the window becomes wide (desktop menu).
+  window.addEventListener("resize", function () {
+    if (window.innerWidth >= 1060) setMenu(false);
+  });
+
+  /* ---------- 3. Scroll animations ---------- */
+
+  var revealItems = document.querySelectorAll("[data-reveal]");
+
+  // Items that share a parent appear one after another, not all at once.
+  revealItems.forEach(function (el) {
+    var siblings = Array.prototype.filter.call(el.parentNode.children, function (child) {
+      return child.hasAttribute("data-reveal");
+    });
+    var index = siblings.indexOf(el);
+    if (index > 0) el.style.setProperty("--delay", Math.min(index, 5) * 0.09 + "s");
+  });
+
+  if ("IntersectionObserver" in window) {
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add("is-visible");
+        observer.unobserve(entry.target);
+      });
+    }, { rootMargin: "0px 0px -8% 0px", threshold: 0.1 });
+    revealItems.forEach(function (el) { observer.observe(el); });
+  } else {
+    revealItems.forEach(function (el) { el.classList.add("is-visible"); });
+  }
+
+  /* ---------- 4. Contact form ---------- */
 
   var form = document.querySelector(".contact-form");
   if (!form) return;
