@@ -666,7 +666,8 @@ a:hover { text-decoration-thickness: 2px; }
 .form-status:empty { display: none; }
 .form-status.is-success { color: #8fe0b0; }
 .form-status.is-error { color: #ffb0a5; }
-.form-privacy { margin-top: 18px; font-size: .95rem; color: var(--blue-300); }
+.form-reply { margin: 18px 0 0; font-weight: 600; color: var(--white); }
+.form-privacy { margin-top: 8px; font-size: .95rem; color: var(--blue-300); }
 .contact-form button[disabled] { opacity: .6; cursor: progress; }
 
 @media (min-width: 1100px) {
