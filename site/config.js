@@ -23,7 +23,7 @@ window.KIOSK_CONFIG = {
   starterPrice: "",
 
   // Contact form endpoint from Formspree (see README). Example: "https://formspree.io/f/abcdwxyz"
-  formEndpoint: "",
+  formEndpoint: "https://formspree.io/f/mljgzrwa",
 
   // Your photo for the "About" section. Put the file in site/assets/ first.
   // Example: "assets/me.jpg"
