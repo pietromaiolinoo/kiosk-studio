@@ -26,7 +26,7 @@ Predominantly blue and gray. Check every text/background pair for contrast (WCAG
 |------------------|-----------|
 | Navy (main dark) | `#0c2340` |
 | Navy (sections)  | `#11304f` |
-| Blue (buttons)   | `#2a6bbd` |
+| Blue (buttons, logo blue) | `#0a54b5` |
 | Light blue text  | `#c2d6ee` |
 | Light blue bg    | `#dde8f5` |
 | Gray bg          | `#e4e8ee` |
@@ -42,4 +42,13 @@ Predominantly blue and gray. Check every text/background pair for contrast (WCAG
 
 ## Logo
 
-To do. A text logo (awning icon + "Kiosk Studio" in Source Serif 4) is used until then.
+The logo is a "KS" mark (dark K, blue S) plus the words "Kiosk Studio".
+
+| File (in `site/assets/`) | Use |
+|--------------------------|-----|
+| `logo.png`               | Original colours, for light backgrounds |
+| `logo-light.png`         | White and light blue, for the dark blue header and dark images |
+| `logo-mark.png`          | The "KS" mark alone, original colours |
+| `favicon.png`, `apple-touch-icon.png` | Browser tab and phone home-screen icon (light mark on navy) |
+
+Logo blue is about `#004fb3`; the site's button blue was aligned to it.

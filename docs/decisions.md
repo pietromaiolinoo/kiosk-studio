@@ -173,3 +173,14 @@ care plan was removed from the website and from `site/config.js`.
 **Open question:** where each client's site is hosted after handover (for example on a free
 hosting account in the client's name) and whether later changes are offered as separate paid
 jobs. To be decided by the owner before the first client.
+
+---
+
+### 2026-10-17 — Logo and contact details on the website
+
+**Decision:** The owner's "KS" logo is used in the header (light version on dark blue) and as
+the browser icon. The studio email and WhatsApp number are in `site/config.js`. The button
+blue now matches the logo blue.
+
+**Note:** The WhatsApp number is Brazilian (+55) while the target market is Europe. European
+owners may hesitate to message a foreign number; a European number could be considered later.

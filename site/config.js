@@ -10,11 +10,11 @@ window.KIOSK_CONFIG = {
   ownerName: "",
 
   // Where people can reach you. Example: "hello@kioskstudio.eu"
-  email: "",
+  email: "kioskstudio2026@gmail.com",
 
   // WhatsApp number in international format, digits only, no "+" or spaces.
   // Example: "351912345678"
-  whatsapp: "",
+  whatsapp: "5521990538882",
 
   // Optional: where you are based. Example: "Based in Lisbon, working across Europe"
   location: "",
@@ -30,10 +30,11 @@ window.KIOSK_CONFIG = {
   photo: "",
 
   // Your logo. Put the file in site/assets/ first. Example: "assets/logo.png"
-  logo: "",
-  // Set to true if your logo is light-coloured and reads well on dark blue.
-  // Leave false to show it on a small white badge so it is always legible.
-  logoOnDark: false,
+  logo: "assets/logo-light.png",
+  // true = the logo is light-coloured and reads well on the dark blue header
+  // (assets/logo-light.png). false = show it on a small white badge instead
+  // (use this with the original colours, assets/logo.png).
+  logoOnDark: true,
 
   // Links to live sample sites, once they exist. Example: "../demos/florist/"
   demoLinks: {
