@@ -102,3 +102,105 @@ plain-language description of what changed and why. Nobody pushes directly to `m
 (to be enforced with a branch rule in GitHub settings).
 
 **Why:** Every change is reviewable and reversible, and the history explains itself.
+
+---
+
+### 2026-10-16 — Repository renamed and made public
+
+**Decision:** The repository is `kiosk-studio` and is public. `main` is protected by a ruleset
+(pull request and passing check required). Secret scanning and push protection are on.
+
+**Why:** GitHub Pages is free only for public repositories, and the project URL now reads
+`pietromaiolinoo.github.io/kiosk-studio/`. Sensitive business data stays outside this repo.
+
+---
+
+### 2026-10-16 — Studio website, first version
+
+**Decision:**
+
+- One page, with separate privacy policy and terms pages.
+- Predominantly blue: dark navy for the header, hero, examples and contact; light blue and gray
+  for the other sections; white only for cards.
+- Brand signature: a kiosk awning (blue and white scallops) used in the text logo, favicon and
+  as a stripe under the header.
+- System fonts only, with large, heavy, tightly spaced headings.
+- Sample sites in the "Examples" section are drawn in HTML/CSS (no images), clearly labelled
+  "Sample", for fictional businesses.
+- All owner details (email, WhatsApp, prices, form, photo, logo, legal details) live in
+  `site/config.js`. Anything empty is hidden; nothing broken or "undefined" is ever shown.
+- The contact form posts to Formspree when configured; otherwise falls back to an email draft,
+  or is hidden.
+- A Content-Security-Policy restricts the pages to their own files plus Formspree.
+
+**Why:** A busy owner on a phone should understand the offer in seconds, trust it, and reach
+out. Drawing the samples in code keeps the page fast and avoids stock photos.
+
+**Alternatives considered:** separate pages per section (more clicks, little benefit at this
+size); self-hosted web fonts (nicer typography, but slower and more files to manage — can be
+revisited).
+
+---
+
+### 2026-10-16 — Website redesign: editorial instead of "template" look
+
+**Decision:** After reviewing the first version, the owner found it looked generic and
+AI-made (many boxes, pill badges, icon tiles) and too narrow on wide screens. The site was
+redesigned:
+
+- Thin rules and white space instead of cards; square-cornered buttons; no gradients.
+- Headings in **Source Serif 4**, text in **Source Sans 3**, both self-hosted in `site/fonts/`
+  (replaces the earlier "system fonts only" decision).
+- Each section has a numbered label column on the left and content on the right, like
+  consultancy and studio websites.
+- The hero fills the first screen; the content width grows to 1600px on large monitors.
+- The decorative awning stripe was removed; the awning stays only in the logo icon.
+
+**Why:** Professional services sites (consultancies, design studios) rely on strong serif
+typography and restraint. Rounded cards, gradients and generic sans fonts are now widely seen
+as signs of an AI-generated template, which hurts trust.
+
+---
+
+### 2026-10-16 — One-off websites only, no care plan
+
+**Decision:** Kiosk Studio sells one thing: a website, built once and handed over to the
+client for a single price. There is no monthly care plan, hosting plan or subscription. The
+care plan was removed from the website and from `site/config.js`.
+
+**Why:** The owner's business model is to build the site, deliver it, and finish the job.
+
+**Open question:** where each client's site is hosted after handover (for example on a free
+hosting account in the client's name) and whether later changes are offered as separate paid
+jobs. To be decided by the owner before the first client.
+
+---
+
+### 2026-10-17 — Logo and contact details on the website
+
+**Decision:** The owner's "KS" logo is used in the header (light version on dark blue) and as
+the browser icon. The studio email and WhatsApp number are in `site/config.js`. The button
+blue now matches the logo blue.
+
+**Note:** The WhatsApp number is Brazilian (+55) while the target market is Europe. European
+owners may hesitate to message a foreign number; a European number could be considered later.
+
+---
+
+### 2026-10-17 — "Price on request" for now
+
+**Decision:** The website shows "Price on request" instead of a fixed price. Each enquiry gets
+a fixed quote before any work starts. A pricing study (`docs/pricing-research.md`) will come
+later; once a price is set, it goes in `starterPrice` in `site/config.js`.
+
+**Why:** The owner wants to talk to each prospect first and has not researched market prices yet.
+
+---
+
+### 2026-10-17 — Domain: kioskstudio.art
+
+**Decision:** The studio site uses **kioskstudio.art**, registered at Porkbun (auto-renew,
+WHOIS privacy and transfer lock on). It points to GitHub Pages with DNS records at Porkbun and
+the custom domain set in the repository's Pages settings. Paths stay relative.
+
+**Why:** A short, memorable address looks more professional than the GitHub address.

@@ -1,30 +1,430 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="no-js">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Kiosk Studio</title>
-  <meta name="description" content="Simple, affordable websites for small local businesses.">
-  <style>
-    body {
-      margin: 0;
-      min-height: 100vh;
-      display: grid;
-      place-items: center;
-      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-      background: #f4f6f8;
-      color: #2b3440;
-      text-align: center;
-      padding: 1rem;
-    }
-    h1 { color: #1f4e8c; margin: 0 0 .5rem; }
-    p { margin: 0; color: #5a6675; }
-  </style>
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; connect-src 'self' https://formspree.io; form-action 'self' https://formspree.io mailto:; base-uri 'self'; object-src 'none'">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+
+  <title>Kiosk Studio — Simple websites for local businesses</title>
+  <meta name="description" content="Simple, affordable websites for small local businesses: florists, cafés, restaurants, barbershops and small shops. Made for phones, clear prices, no tech talk.">
+  <link rel="canonical" href="https://kioskstudio.art/">
+  <meta name="theme-color" content="#0b1f36">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Kiosk Studio">
+  <meta property="og:title" content="Kiosk Studio — Simple websites for local businesses">
+  <meta property="og:description" content="A clear, fast website for your shop, café or salon. Made for phones, with a simple price.">
+  <meta property="og:url" content="https://kioskstudio.art/">
+  <meta property="og:image" content="https://kioskstudio.art/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Kiosk Studio — simple websites for local businesses">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="assets/favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="preload" href="fonts/source-serif-4.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/source-sans-3.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="config.js" defer></script>
+  <script src="js/main.js" defer></script>
 </head>
 <body>
-  <main>
-    <h1>Kiosk Studio</h1>
-    <p>Simple websites for small local businesses. Coming soon.</p>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="#top" aria-label="Kiosk Studio, back to top">
+        <img class="brand-logo" data-show-if="logo" data-src="logo" alt="Kiosk Studio" hidden>
+        <span class="wordmark" data-hide-if="logo">
+          <svg class="wordmark-icon" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+            <path d="M3 6h6.5v8a3.25 3.25 0 0 1-6.5 0z" fill="currentColor"/>
+            <path d="M9.5 6H16v8a3.25 3.25 0 0 1-6.5 0z" class="stripe"/>
+            <path d="M16 6h6.5v8a3.25 3.25 0 0 1-6.5 0z" fill="currentColor"/>
+            <path d="M22.5 6H29v8a3.25 3.25 0 0 1-6.5 0z" class="stripe"/>
+            <rect x="6" y="19" width="20" height="8" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/>
+          </svg>
+          <span class="wordmark-text">Kiosk Studio</span>
+        </span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span class="nav-toggle-bars" aria-hidden="true"></span>
+        <span class="visually-hidden">Menu</span>
+      </button>
+
+      <nav id="site-nav" class="site-nav" aria-label="Main">
+        <ul>
+          <li><a href="#included">What you get</a></li>
+          <li><a href="#examples">Examples</a></li>
+          <li><a href="#how">How it works</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a class="nav-cta" href="#contact">Get in touch</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- Hero -->
+    <section class="hero" id="top">
+      <div class="wrap hero-inner">
+        <div class="hero-copy">
+          <p class="kicker">Kiosk Studio · Websites for local businesses</p>
+          <h1>A simple website for your local business.</h1>
+          <p class="lead">Clear, fast and made for phones. For florists, cafés, restaurants, barbers and small shops that want to be easy to find, without paying agency prices.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#contact">Talk to me about your website</a>
+            <a class="text-link" href="#examples">See examples <span aria-hidden="true">→</span></a>
+          </div>
+        </div>
+
+        <div class="hero-visual" aria-hidden="true">
+          <div class="phone phone--hero">
+            <div class="phone-screen m-cafe">
+              <div class="m-bar"><span class="m-logo">Corner Café</span><span class="m-burger"></span></div>
+              <div class="m-hero">
+                <p class="m-kicker">Coffee &amp; bakery</p>
+                <p class="m-title">Good coffee, baked fresh every morning</p>
+                <span class="m-btn">See the menu</span>
+              </div>
+              <div class="m-rows">
+                <p><span>Mon–Fri</span><span>7:30–18:00</span></p>
+                <p><span>Sat–Sun</span><span>8:30–15:00</span></p>
+              </div>
+              <div class="m-actions"><span>Call</span><span>Directions</span></div>
+            </div>
+          </div>
+          <p class="hero-visual-note">Sample design</p>
+        </div>
+      </div>
+
+      <div class="wrap">
+        <ul class="hero-facts">
+          <li><strong>Made for phones</strong> Most customers find you on one.</li>
+          <li><strong data-show-if="starterPrice" hidden>From <span data-text="starterPrice"></span></strong><strong data-hide-if="starterPrice">Pay once</strong> No subscription, no monthly fee.</li>
+          <li><strong>No tracking</strong> No cookie banner for your customers.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- What is included -->
+    <section class="section section--light" id="included" aria-labelledby="included-title">
+      <div class="wrap section-grid">
+        <p class="section-label"><span>01</span> What you get</p>
+        <div class="section-body">
+          <h2 id="included-title">Everything a customer looks for, on one clear page.</h2>
+          <p class="section-intro">Most people find a local business on their phone. Your website shows them what they need in a few seconds, then helps them call, message or visit.</p>
+
+          <dl class="feature-list">
+            <div>
+              <dt>Made for phones</dt>
+              <dd>Easy to read and use on any screen, starting with the small one in your customer's pocket.</dd>
+            </div>
+            <div>
+              <dt>Your essentials</dt>
+              <dd>Opening hours, address, your menu or services, prices and photos. Written clearly, kept short.</dd>
+            </div>
+            <div>
+              <dt>One tap to reach you</dt>
+              <dd>Buttons to call, send a message or get directions. Nothing to hunt for.</dd>
+            </div>
+            <div>
+              <dt>Ready for Google</dt>
+              <dd>Set up with the basics search engines look for, so people searching nearby can find you.</dd>
+            </div>
+            <div>
+              <dt>Your own address</dt>
+              <dd>Help choosing and connecting a web address, like yourshop.com, so it is easy to share.</dd>
+            </div>
+            <div>
+              <dt>Fast and private</dt>
+              <dd>No tracking and no cookie banner. Pages load quickly, even on a weak connection.</dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <!-- Examples -->
+    <section class="section section--dark" id="examples" aria-labelledby="examples-title">
+      <div class="wrap section-grid">
+        <p class="section-label"><span>02</span> Examples</p>
+        <div class="section-body">
+          <h2 id="examples-title">What your website could look like.</h2>
+          <p class="section-intro">Sample designs for fictional businesses, to give you an idea. Yours is made around your business, your photos and your words.</p>
+        </div>
+      </div>
+
+      <div class="wrap">
+        <div class="samples">
+          <figure class="sample">
+            <div class="phone" aria-hidden="true">
+              <div class="phone-screen m-florist">
+                <div class="m-bar"><span class="m-logo">Bloom Corner</span><span class="m-burger"></span></div>
+                <div class="m-hero">
+                  <p class="m-kicker">Florist</p>
+                  <p class="m-title">Fresh bouquets, made while you wait</p>
+                  <span class="m-btn">Call to order</span>
+                </div>
+                <div class="m-rows">
+                  <p><span>Bouquets</span><span>from €25</span></p>
+                  <p><span>Mon–Sat</span><span>9:00–19:00</span></p>
+                </div>
+                <div class="m-actions"><span>WhatsApp</span><span>Directions</span></div>
+              </div>
+            </div>
+            <figcaption>
+              <span class="sample-meta">Sample · Fictional business</span>
+              <strong>Florist</strong>
+              <span>Bouquets, prices and a quick way to order.</span>
+              <a class="text-link" data-show-if="demoLinks.florist" data-href="demoLinks.florist" hidden>View the sample site <span aria-hidden="true">→</span></a>
+            </figcaption>
+          </figure>
+
+          <figure class="sample">
+            <div class="phone" aria-hidden="true">
+              <div class="phone-screen m-restaurant">
+                <div class="m-bar"><span class="m-logo">Trattoria Olivo</span><span class="m-burger"></span></div>
+                <div class="m-hero">
+                  <p class="m-kicker">Restaurant</p>
+                  <p class="m-title">Home-made pasta, every day</p>
+                  <span class="m-btn">Book a table</span>
+                </div>
+                <div class="m-rows">
+                  <p><span>Today's menu</span><span>View</span></p>
+                  <p><span>Tue–Sun</span><span>12:00–22:30</span></p>
+                </div>
+                <div class="m-actions"><span>Call</span><span>Directions</span></div>
+              </div>
+            </div>
+            <figcaption>
+              <span class="sample-meta">Sample · Fictional business</span>
+              <strong>Restaurant</strong>
+              <span>Menu, opening hours and table bookings.</span>
+              <a class="text-link" data-show-if="demoLinks.restaurant" data-href="demoLinks.restaurant" hidden>View the sample site <span aria-hidden="true">→</span></a>
+            </figcaption>
+          </figure>
+
+          <figure class="sample">
+            <div class="phone" aria-hidden="true">
+              <div class="phone-screen m-barber">
+                <div class="m-bar"><span class="m-logo">Ferro Barbers</span><span class="m-burger"></span></div>
+                <div class="m-hero">
+                  <p class="m-kicker">Barbershop</p>
+                  <p class="m-title">Cuts, shaves and beard trims</p>
+                  <span class="m-btn">Book a chair</span>
+                </div>
+                <div class="m-rows">
+                  <p><span>Haircut</span><span>€18</span></p>
+                  <p><span>Beard trim</span><span>€10</span></p>
+                </div>
+                <div class="m-actions"><span>Call</span><span>WhatsApp</span></div>
+              </div>
+            </div>
+            <figcaption>
+              <span class="sample-meta">Sample · Fictional business</span>
+              <strong>Barbershop</strong>
+              <span>Services, prices and booking by message.</span>
+              <a class="text-link" data-show-if="demoLinks.barbershop" data-href="demoLinks.barbershop" hidden>View the sample site <span aria-hidden="true">→</span></a>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- How it works -->
+    <section class="section section--gray" id="how" aria-labelledby="how-title">
+      <div class="wrap section-grid">
+        <p class="section-label"><span>03</span> How it works</p>
+        <div class="section-body">
+          <h2 id="how-title">Three steps. No tech talk.</h2>
+          <ol class="steps">
+            <li>
+              <span class="step-number" aria-hidden="true">1</span>
+              <h3>You send the basics</h3>
+              <p>Your name, logo if you have one, a few photos, opening hours and what you offer. A short message or a quick call is enough.</p>
+            </li>
+            <li>
+              <span class="step-number" aria-hidden="true">2</span>
+              <h3>You see a preview</h3>
+              <p>I build your site and send you a link to look at on your phone. You tell me what to change, in plain words.</p>
+            </li>
+            <li>
+              <span class="step-number" aria-hidden="true">3</span>
+              <h3>It goes live</h3>
+              <p>When you are happy, your website goes online and you can share it with your customers.</p>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing -->
+    <section class="section section--light" id="pricing" aria-labelledby="pricing-title">
+      <div class="wrap section-grid">
+        <p class="section-label"><span>04</span> Pricing</p>
+        <div class="section-body">
+          <h2 id="pricing-title">One simple price.</h2>
+          <p class="section-intro">Every business is a little different, so tell me what you need and I will give you one fixed price before any work starts. You pay once. No subscription and no monthly fee to me.</p>
+
+          <div class="plan">
+            <div class="plan-summary">
+              <h3>Your website</h3>
+              <p class="plan-price" data-show-if="starterPrice" hidden><span data-text="starterPrice"></span> <small>one-off</small></p>
+              <p class="plan-price plan-price--ask" data-hide-if="starterPrice">Price on request</p>
+              <p class="plan-note">A clear, one-page website for your business, made once and handed over to you.</p>
+            </div>
+            <ul class="ticks">
+              <li>Designed for phones first</li>
+              <li>Your hours, address, services or menu</li>
+              <li>Call, message and directions buttons</li>
+              <li>Basic setup for Google</li>
+              <li>Help connecting your own web address</li>
+              <li>A preview to review before it goes live</li>
+            </ul>
+          </div>
+
+          <div class="pricing-foot">
+            <a class="btn btn-primary" href="#contact">Ask about your website</a>
+            <p class="fine-print">Your web address (domain) is usually a small yearly fee paid to the company that registers it. I can help you choose and set it up.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="section section--gray" id="about" aria-labelledby="about-title">
+      <div class="wrap section-grid">
+        <p class="section-label"><span>05</span> About</p>
+        <div class="section-body about">
+          <div class="about-main">
+            <img class="about-photo" data-show-if="photo" data-src="photo" alt="Photo of the person behind Kiosk Studio" width="320" height="320" loading="lazy" hidden>
+            <h2 id="about-title">
+              <span data-show-if="ownerName" hidden>Hi, I'm <span data-text="ownerName"></span>. You talk to the person who builds your website.</span>
+              <span data-hide-if="ownerName">You talk to the person who builds your website.</span>
+            </h2>
+          </div>
+          <div class="about-copy">
+            <p>I run Kiosk Studio on my own. There is no sales team and no account manager: from the first message to the day your site goes live, you deal with me.</p>
+            <p>I started it because many good local places are hard to find online. Some have no website. Others have one that is slow, broken or years out of date. A small business deserves a simple, honest website that works, at a price that makes sense.</p>
+            <p class="about-location" data-show-if="location" data-text="location" hidden></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section section--light" id="faq" aria-labelledby="faq-title">
+      <div class="wrap section-grid">
+        <p class="section-label"><span>06</span> FAQ</p>
+        <div class="section-body">
+          <h2 id="faq-title">Questions owners often ask.</h2>
+          <div class="faq">
+            <details>
+              <summary>Do I need to know anything technical?</summary>
+              <p>No. You tell me about your business in your own words. I take care of the rest and explain anything you need to know in plain language.</p>
+            </details>
+            <details>
+              <summary>What do I need to send you?</summary>
+              <p>Your business name, address, opening hours, what you offer and how people can contact you. A logo and a few photos help, but they are not required to get started.</p>
+            </details>
+            <details>
+              <summary>I don't have good photos. Is that a problem?</summary>
+              <p>No. Photos taken on a recent phone in good daylight usually work well. I can tell you what to shoot, and the design works with just a few pictures.</p>
+            </details>
+            <details>
+              <summary>I already have a website, but it is broken or out of date.</summary>
+              <p>That is very common. Send me the link and I will tell you honestly whether it makes more sense to fix it or start fresh.</p>
+            </details>
+            <details>
+              <summary>How long does it take?</summary>
+              <p>It depends mostly on how quickly you can send the basics. A simple one-page website is a small project, so it is a matter of days, not months. I will give you a date before we start.</p>
+            </details>
+            <details>
+              <summary>Is there a monthly fee?</summary>
+              <p>Not to me. You pay once for your website. The only regular cost is your web address (domain), usually a small yearly fee paid to the company that registers it.</p>
+            </details>
+            <details>
+              <summary>Why is it more affordable than an agency?</summary>
+              <p>Because the websites are simple on purpose. I focus on what local customers actually need and reuse designs I have refined for each type of business, instead of starting from zero every time.</p>
+            </details>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section section--dark section--contact" id="contact" aria-labelledby="contact-title">
+      <div class="wrap section-grid">
+        <p class="section-label"><span>07</span> Contact</p>
+        <div class="section-body contact">
+          <div class="contact-copy">
+            <h2 id="contact-title">Tell me about your business.</h2>
+            <p class="section-intro">Send a short message. I will reply personally with a few questions and a clear price. No obligation.</p>
+
+            <ul class="contact-direct">
+              <li data-show-if="whatsapp" hidden>
+                <span class="contact-label">WhatsApp</span>
+                <a data-href="whatsapp" data-format="whatsapp">Send a message <span aria-hidden="true">→</span></a>
+              </li>
+              <li data-show-if="email" hidden>
+                <span class="contact-label">Email</span>
+                <a data-href="email" data-format="mailto" data-text="email"></a>
+              </li>
+            </ul>
+            <p class="contact-soon" data-hide-if="formEndpoint|email|whatsapp">Contact details are on their way. Please check back very soon.</p>
+          </div>
+
+          <form class="contact-form" data-show-if="formEndpoint|email" hidden novalidate>
+            <div class="field">
+              <label for="f-name">Your name</label>
+              <input id="f-name" name="name" type="text" autocomplete="name" required>
+            </div>
+            <div class="field">
+              <label for="f-business">Business name and type <span class="optional">(optional)</span></label>
+              <input id="f-business" name="business" type="text" autocomplete="organization" placeholder="For example: Rosa's Flowers, florist">
+            </div>
+            <div class="field">
+              <label for="f-reply">Email or phone</label>
+              <input id="f-reply" name="reply_to" type="text" autocomplete="email" required aria-describedby="f-reply-hint">
+              <p class="hint" id="f-reply-hint">So I can reply to you.</p>
+            </div>
+            <div class="field">
+              <label for="f-message">Your message</label>
+              <textarea id="f-message" name="message" rows="5" required placeholder="What does your business do? Do you have a website now?"></textarea>
+            </div>
+            <div class="field field--trap" aria-hidden="true">
+              <label for="f-gotcha">Leave this empty</label>
+              <input id="f-gotcha" name="_gotcha" type="text" tabindex="-1" autocomplete="off">
+            </div>
+            <button class="btn btn-light" type="submit">Send message</button>
+            <p class="form-status" role="status" aria-live="polite"></p>
+            <p class="form-privacy">Your details are only used to reply to you. See the <a href="privacy.html">privacy policy</a>.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+
   </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <div>
+        <p class="footer-brand">Kiosk Studio</p>
+        <p>Simple websites for local businesses.</p>
+        <p data-show-if="location" data-text="location" hidden></p>
+      </div>
+      <ul class="footer-links">
+        <li data-show-if="email" hidden><a data-href="email" data-format="mailto" data-text="email"></a></li>
+        <li><a href="privacy.html">Privacy policy</a></li>
+        <li><a href="terms.html">Terms</a></li>
+        <li class="footer-copy">© <span data-year></span> Kiosk Studio</li>
+      </ul>
+    </div>
+  </footer>
 </body>
 </html>

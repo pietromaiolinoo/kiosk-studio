@@ -38,7 +38,10 @@ a phone, and are wary of being oversold. Write for them:
 - English copy.
 - **Predominantly blue and gray.** Modern, calm, trustworthy. No loud colours, no gimmicks.
 - Clean layouts with plenty of white space.
-- System font stack only (see the "no external CDNs" rule below).
+- Fonts: Source Serif 4 (headings) and Source Sans 3 (text), stored in `site/fonts/`
+  (open licence). Never loaded from an outside service.
+- Editorial look: thin rules and white space instead of boxes and cards; no gradients,
+  no pill badges, no icon tiles.
 - Detailed notes live in [`docs/brand.md`](docs/brand.md).
 
 ## Standing rules (always apply — never break these)
@@ -63,8 +66,9 @@ a phone, and are wary of being oversold. Write for them:
   no frameworks, no package managers unless a decision in `docs/decisions.md` says otherwise.
   Simple = cheap to maintain = cheap for clients.
 - **All paths must be relative** (`css/style.css`, `../images/logo.png`), never starting with
-  `/`. The site is served from a project URL (`<username>.github.io/<repo-name>/`), so a path
-  like `/css/style.css` would break.
+  `/`. Pages must work both at https://kioskstudio.art/ and at the GitHub address
+  (`pietromaiolinoo.github.io/kiosk-studio/`), and demos must keep working when moved to a
+  client's domain, so a path like `/css/style.css` would break.
 - **Every demo and template is self-contained**: its own folder with its own `index.html`,
   `css/`, `images/`. No shared files between folders, so any one of them can be copied and
   handed to a client on its own.
@@ -102,5 +106,12 @@ Short summary; full reasoning in [`docs/decisions.md`](docs/decisions.md). Newes
 | 2026-10-16 | Repository set up: folder structure, standing rules, working agreements. |
 | 2026-10-16 | Plain HTML/CSS, no build step, no frameworks. |
 | 2026-10-16 | Publish with GitHub Pages via GitHub Actions: `site/` at the root, `demos/` under `/demos/`. `templates/` and `docs/` are not published. |
-| 2026-10-16 | All paths relative; every demo/template self-contained; system fonts only. |
+| 2026-10-16 | All paths relative; every demo/template self-contained; fonts stored in the repo, never from a CDN. |
 | 2026-10-16 | Automatic check on every pull request for absolute paths and external scripts/fonts. |
+| 2026-10-16 | Repo renamed to `kiosk-studio`, made public; `main` protected by a ruleset. |
+| 2026-10-16 | Studio website v1: one page + privacy + terms; owner details in `site/config.js`; Formspree-ready contact form. |
+| 2026-10-16 | Website redesign: editorial layout (rules, no cards), Source Serif 4 + Source Sans 3 self-hosted, full-screen hero. |
+| 2026-10-16 | One-off websites only: single price, no care plan or subscription. |
+| 2026-10-17 | Logo added (light version in header, KS mark as icon); studio email and WhatsApp in config. |
+| 2026-10-17 | "Price on request" on the website; fixed quote per enquiry; pricing study later. |
+| 2026-10-17 | Domain kioskstudio.art (Porkbun) connected to GitHub Pages. |
