@@ -33,7 +33,7 @@ window.KIOSK_CONFIG = {
 
   // Your photo for the "About" section. Put the file in site/assets/ first.
   // Example: "assets/me.jpg"
-  photo: "",
+  photo: "assets/photo.jpg",
 
   // Your logo. Put the file in site/assets/ first. Example: "assets/logo.png"
   logo: "assets/logo-light.png",
